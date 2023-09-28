@@ -1,0 +1,123 @@
+Unit_name: Intro to Java and Concurrency
+Page_name: Tour of Java 1 (Basics)
+
+Question 1: What is the correct syntax to declare an array of integers in Java?
+
+   A) int myArray[] = new Array();
+   - Incorrect. In Java, the type of array (in this case, int), precedes the array name and does not utilize the new Array() syntax. Please check the proper syntax for array declaration.
+
+   B) int myArray[] = new int[10];
+   - Correct. This is the correct way to declare an integer array in Java with a length of 10.
+   
+   C) Array myArray = new int[10];
+   - Incorrect. 'Array' is not a valid type for declaring an array in Java. Review the correct syntax and note that the type of the items in the array should be specified.
+
+Question 2: Given the following Java code, what would be the output?
+
+```java
+for(int i = 0; i<4; i++){
+   System.out.println(i);
+}
+```
+
+   A) 0 1 2 3
+   - Correct. The for loop starts with i=0, and as long as i<4, it prints the value of 'i' and then increments 'i'.
+  
+   B) 1 2 3 4
+   - Incorrect. Array-based counting in Java, and many other programming languages, starts at 0, not 1. Remember to consider the initial value of 'i'.
+
+   C) 0 1 2
+   - Incorrect. The for loop runs while 'i' is less than 4, including when 'i' equals 3. Remember to look at the condition in full to understand when the loop will terminate. 
+
+Question 3: Consider the following method in Java:
+
+```java
+public static int calculate(int a, int b){
+  return a * b;
+}
+```
+
+What will be the output if we call `calculate(2, 3);` ?
+
+   A) 6
+   - Correct. The method `calculate` multiplies the two input parameters, 'a' and 'b', so 2 * 3 equals 6.
+   
+   B) 5
+   - Incorrect. The method 'calculate' multiplies its inputs, so 2 * 3 actually equals 6. Review the operation performed in the method.
+
+   C) 2
+   - Incorrect. This seems to be considering only one input to the function. Remember, the 'calculate' method multiplies its two inputs.
+
+1. Consider the following code in Go: `var name string = "Joe"`. What does the keyword `string` specify in this context?
+
+    A) "string" is the type of the assigned value "Joe".
+    - Incorrect. In Go, the assigned value does not directly determine its type. Here, 'string' is specifying the type of variable 'name'.
+    
+    B) "string" signifies the data type of the variable "name".
+    - Correct. In Go, when declaring a variable, its type is specified after the variable name. "string" is here defining the variable "name" to be of type string.
+    
+    C) "string" is the name of a function applied to the variable "name".
+    - Incorrect. In this context, "string" is not functioning as a callable function but specifying the type of variable 'name'.
+
+
+2. See the following Go code: 
+```
+type MyInt int
+var x MyInt = 5
+var y int = 10
+fmt.Println(x + y)
+```
+How could this code be amended so that it will compile correctly?
+
+    A) By removing the line `type MyInt int`.
+    - Incorrect. While that would allow the code to compile, 'MyInt' could actually be a type necessary for other parts of your code base. Instead, we need to look at type conversion to resolve this issue.
+   
+    B) By explicit type conversion, changing the print line to: `fmt.Println(x + MyInt(y))`.
+    - Correct. In Go, unlike some languages, you cannot directly operate on different types, even if they are fundamentally similar. Instead, you must explicitly convert the types.
+   
+    C) By changing 'var y int = 10' to 'var y MyInt = 10'.
+    - Correct. This solution also works as you are changing 'y' to be of the same type as 'x', and therefore they can be directly operated upon. But this might not always be the most efficient way especially when you are dealing with a lot of variables of type 'int'.
+
+1. Consider the Java statement below:
+
+    ```
+    if (age >= 18) 
+    {
+        System.out.println("Adult");
+    }
+    if (age < 18)
+    {
+        System.out.println("Minor");
+    }
+    ```
+
+    How could you refactor this with an 'if-else' structure?
+
+    A) No refactoring needed, the expressions are already optimized.
+    - Incorrect. Although the above code works, it checks both conditions separately even when they are mutually exclusive which may incur unnecessary performance costs.
+
+    B) Use switch-case instead.
+    - Incorrect. Switch-case is better suited for discrete values and not for range checks. An 'if-else' construct is more suitable in this case.
+
+    C) Change the second 'if' to 'else'.
+    - Correct. Since the second condition is the exact opposite of the first one, an 'if-else' statement would evaluate the age only once, providing better performance.
+
+2. Analyze the following Java code:
+
+    ```
+    for (int i = 5; i > 0; i--)
+    {
+        System.out.println(i);
+    }
+    ```
+
+    What will be the output of this code?
+
+    A) The numbers 1 to 5 will be printed, each in a new line.
+    - Incorrect. The loop condition and the decrement operation will result in the numbers 5 to 1 being printed, not 1 to 5.
+
+    B) An infinite loop will occur.
+    - Incorrect. The 'for' loop structure here ensures that 'i' is reduced by 1 in each iteration. The condition 'i > 0' will eventually become false, preventing an infinite loop.
+
+    C) The numbers 5 to 1 will be printed, each in a new line.
+    - Correct. This 'for' loop will execute as long as 'i' is greater than 0. With each loop, 'i' is reduced by 1, printing the numbers 5 to 1 sequentially.
