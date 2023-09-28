@@ -6,11 +6,11 @@ course_description: |
 questions_per_skill: 2
 
 unit_1:
-  unit_name: Intro to Golang & Basic Concurrency
+  unit_name: Intro to Java and Concurrency
   
   page_1:
-    page_name: Tour of Go 1 (Basics)
+    page_name: Tour of Java 1 (Basics)
     skills:
-      - "Understand and apply Golang fundamentals: Basic syntax"
-      - "Understand and apply Golang fundamentals: Types"
-      - "Understand and apply Golang fundamentals: Control structures"
+      - "Understand and apply Java fundamentals: Basic syntax"
+      - "Understand and apply Java fundamentals: Types"
+      - "Understand and apply Java fundamentals: Control structures"
