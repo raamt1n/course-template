@@ -2,60 +2,45 @@ Unit_name: Intro to Java and Concurrency
 Page_name: Tour of Java 1 (Basics)
 
 Question 1: What is the correct syntax to declare an array of integers in Java?
-
    A) int myArray[] = new Array();
    - Incorrect. In Java, the type of array (in this case, int), precedes the array name and does not utilize the new Array() syntax. Please check the proper syntax for array declaration.
-
    B) int myArray[] = new int[10];
    - Correct. This is the correct way to declare an integer array in Java with a length of 10.
-   
    C) Array myArray = new int[10];
    - Incorrect. 'Array' is not a valid type for declaring an array in Java. Review the correct syntax and note that the type of the items in the array should be specified.
 
 Question 2: Given the following Java code, what would be the output?
-
 ```java
 for(int i = 0; i<4; i++){
    System.out.println(i);
 }
 ```
-
    A) 0 1 2 3
    - Correct. The for loop starts with i=0, and as long as i<4, it prints the value of 'i' and then increments 'i'.
-  
    B) 1 2 3 4
    - Incorrect. Array-based counting in Java, and many other programming languages, starts at 0, not 1. Remember to consider the initial value of 'i'.
-
    C) 0 1 2
    - Incorrect. The for loop runs while 'i' is less than 4, including when 'i' equals 3. Remember to look at the condition in full to understand when the loop will terminate. 
 
 Question 3: Consider the following method in Java:
-
 ```java
 public static int calculate(int a, int b){
   return a * b;
 }
 ```
-
 What will be the output if we call `calculate(2, 3);` ?
-
    A) 6
    - Correct. The method `calculate` multiplies the two input parameters, 'a' and 'b', so 2 * 3 equals 6.
-   
    B) 5
    - Incorrect. The method 'calculate' multiplies its inputs, so 2 * 3 actually equals 6. Review the operation performed in the method.
-
    C) 2
    - Incorrect. This seems to be considering only one input to the function. Remember, the 'calculate' method multiplies its two inputs.
 
 1. Consider the following code in Go: `var name string = "Joe"`. What does the keyword `string` specify in this context?
-
     A) "string" is the type of the assigned value "Joe".
     - Incorrect. In Go, the assigned value does not directly determine its type. Here, 'string' is specifying the type of variable 'name'.
-    
     B) "string" signifies the data type of the variable "name".
     - Correct. In Go, when declaring a variable, its type is specified after the variable name. "string" is here defining the variable "name" to be of type string.
-    
     C) "string" is the name of a function applied to the variable "name".
     - Incorrect. In this context, "string" is not functioning as a callable function but specifying the type of variable 'name'.
 
@@ -68,18 +53,14 @@ var y int = 10
 fmt.Println(x + y)
 ```
 How could this code be amended so that it will compile correctly?
-
     A) By removing the line `type MyInt int`.
     - Incorrect. While that would allow the code to compile, 'MyInt' could actually be a type necessary for other parts of your code base. Instead, we need to look at type conversion to resolve this issue.
-   
     B) By explicit type conversion, changing the print line to: `fmt.Println(x + MyInt(y))`.
     - Correct. In Go, unlike some languages, you cannot directly operate on different types, even if they are fundamentally similar. Instead, you must explicitly convert the types.
-   
     C) By changing 'var y int = 10' to 'var y MyInt = 10'.
     - Correct. This solution also works as you are changing 'y' to be of the same type as 'x', and therefore they can be directly operated upon. But this might not always be the most efficient way especially when you are dealing with a lot of variables of type 'int'.
 
 1. Consider the Java statement below:
-
     ```
     if (age >= 18) 
     {
@@ -90,34 +71,107 @@ How could this code be amended so that it will compile correctly?
         System.out.println("Minor");
     }
     ```
-
     How could you refactor this with an 'if-else' structure?
-
     A) No refactoring needed, the expressions are already optimized.
     - Incorrect. Although the above code works, it checks both conditions separately even when they are mutually exclusive which may incur unnecessary performance costs.
-
     B) Use switch-case instead.
     - Incorrect. Switch-case is better suited for discrete values and not for range checks. An 'if-else' construct is more suitable in this case.
-
     C) Change the second 'if' to 'else'.
     - Correct. Since the second condition is the exact opposite of the first one, an 'if-else' statement would evaluate the age only once, providing better performance.
 
 2. Analyze the following Java code:
-
     ```
     for (int i = 5; i > 0; i--)
     {
         System.out.println(i);
     }
     ```
-
     What will be the output of this code?
-
     A) The numbers 1 to 5 will be printed, each in a new line.
     - Incorrect. The loop condition and the decrement operation will result in the numbers 5 to 1 being printed, not 1 to 5.
-
     B) An infinite loop will occur.
     - Incorrect. The 'for' loop structure here ensures that 'i' is reduced by 1 in each iteration. The condition 'i > 0' will eventually become false, preventing an infinite loop.
-
     C) The numbers 5 to 1 will be printed, each in a new line.
-    - Correct. This 'for' loop will execute as long as 'i' is greater than 0. With each loop, 'i' is reduced by 1, printing the numbers 5 to 1 sequentially.
+    - Correct. This 'for' loop will execute as long as 'i' is greater than 0. With each loop, 'i' is reduced by 1, printing the numbers 5 to 1 sequentially.Unit_name: Intro to Java and Concurrency
+Page_name: Tour of Java 1 (Basics)
+
+1. What enables concurrent execution of functions or methods in Go?
+    A) Using a loop structure in Go.
+    - Incorrect. A loop is not related to concurrent execution. It is rather for repetitive tasks.
+    B) Prefixing the function or method call with 'go'.
+    - Correct. The Go keyword signals the creation of a goroutine, which represents code running concurrently.
+    C) A built-in function in Go library.
+    - Incorrect. Concurrent execution in Go is facilitated directly by the language's design, not by a specific library function.
+
+2. How do you create and start a new Go routine in your code?
+    A) Using the `go` keyword before calling a function.
+    - Correct. A new Go routine can be launched by prefixing a function call with the `go` keyword.
+    B) Using a function from the Gorilla/Mux library.
+    - Incorrect. Gorilla/Mux is a powerful URL dispatcher, it doesn't create or manage Go routines.
+    C) Assigning a function call to a variable of a specific Goroutine type.
+    - Incorrect. Go routines aren't a type, but a Goroutine is created and launched by prefixing a function call with the `go` keyword.
+
+3. What happens to other Go routines when one routine finishes its execution or exits unexpectedly due to an error?
+    A) They wait until the critical routine is recovered.
+    - Incorrect. Go routines are isolated, they continue their operation irrespective of the state of other routines.
+    B) They are all terminated.
+    - Incorrect. Go routines operate independently, the execution or termination of one does not impact the others.
+    C) They continue with their execution.
+    - Correct. Go routines run independently of each other, an error or exit in one routine does not affect other routines.
+
+4. What are "channels" commonly used for in the Go programming language?
+    A) For changing variables' state.
+    - Incorrect. Channels themselves do not change a variable's state but can be used to communicate state changes between routines.
+    B) For enabling data and information communication between Go routines.
+    - Correct. Channels in Go are primarily used for passing data and signalling between Go routines.
+    C) For executing functions sequentially.
+    - Incorrect. Channels don't directly control the execution of functions. They are a tool for communication and synchronization between Go routines.
+
+5. How does the 'select' keyword function in Go?
+    A) It acts as a dispatcher to execute Go routines randomly.
+    - Incorrect. The `select` keyword does not manage Go routine execution. It is used for communication between channels.
+    B) It waits and selects from multiple channel operations based on their readiness.
+    - Correct. The `select` statement is used to wait for and handle multiple channel operations.
+    C) It determines which branch of an `if` statement to execute.
+    - Incorrect. You may be associating the `select` statement with a decision-making structure like the `if` statement, but in Go, `select` is used for handling multiple channel operations.
+
+6. What is a typical behavior when two Go routines try to send each other data over unbuffered channels and no other operations are ready?
+    A) The program crashes.
+    - Incorrect. The deadlock situation does not crash the program, it enters a permanent blocking state.
+    B) A deadlock situation occurs.
+    - Correct. Simultaneous send operations on unbuffered channels between two routines result in a deadlock as both routines wait indefinitely for the other to receive.
+    C) One routine executes at a faster rate.
+    - Incorrect. Communication over channels has no impacts on the execution speed of Go routines.
+
+7. What is the primary use of Gorilla/Mux in go programming?
+    A) For concurrent execution of Go routines.
+    - Incorrect. Gorilla/Mux is a library for routing HTTP requests, not for managing Go routine execution.
+    B) For building HTTP request routing and URL matchers.
+    - Correct. Gorilla/Mux is essentially used to route HTTP requests to their corresponding handlers in a Go web server.
+    C) For building advanced graphical user interfaces.
+    - Incorrect. Gorilla/Mux is an HTTP router and dispatcher, it does not help with GUI building.
+
+8. How do you stop a Go routine in a clean and safe way?
+    A) By calling the `exit` function.
+    - Incorrect. There's no `exit` function to stop a Go routine. The routine should exit naturally when it finishes its work or receives a signal via a channel.
+    B) By designating a select/case structure with close conditions.
+    - Correct. Go routines are usually given an exit signal, typically by closing a channel or sending a value, which they listen for using a select/case block.
+    C) Through a panic recovery mechanism.
+    - Incorrect. The panic/recover mechanism is for handling exceptional situations, it's not a standard way for terminating Go routines.
+
+9. Can you create a buffered channel for ints in Go, and how?
+    A) Yes, by defining as `chan[int]`.
+    - Incorrect. Channel declarations don't use square brackets. To create a buffer in Go, we use the `make` keyword.
+    B) No, channels must always be unbuffered in Go.
+    - Incorrect. It is possible to create buffered channels in Go with a dedicated size using the `make(chan type, size)` function.
+    C) Yes, by defining as `make(chan int, buffer_size)`.
+    - Correct. Buffered channels are created in Go by specifying an additional argument to `make`, which is the size of the buffer, like so `make(chan int, 5)`.
+
+10. What is one potential issue that the use of a default case in select targeting multiple channels can lead to?
+    A) It can cause the select block to not execute any case.
+    - Incorrect. Instead, a default case is executed when no other cases are ready, so it's not going to stop the selection block from executing.
+    B) It can lead to unintended non-deterministic behavior.
+    - Correct. Including a default in a select statement interfacing multiple channels may lead to random selection of this default case, which may cause unintended behaviors in your program.
+
+    C) It can slow down the program execution.
+    - Incorrect. The presence of a default case does not inherently impact the performance or speed of the Go program.
