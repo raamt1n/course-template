@@ -3,7 +3,7 @@ course_description: |
   The course is an introduction to parallel and concurrent programming, and the programming language is Go / Golang.
   Assume students have some programming experience in another language, such as Java or Python.
   Provide code snippets to make it more interesting, and format inline code as monospace.
-questions_per_skill: 2
+questions_per_skill: 10
 
 unit_1:
   unit_name: Intro to Java and Concurrency
@@ -12,5 +12,3 @@ unit_1:
     page_name: Tour of Java 1 (Basics)
     skills:
       - "Understand and apply Java fundamentals: Basic syntax"
-      - "Understand and apply Java fundamentals: Types"
-      - "Understand and apply Java fundamentals: Control structures"
